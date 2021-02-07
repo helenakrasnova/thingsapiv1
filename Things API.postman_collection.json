@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "6ba81067-9b9b-482b-89be-1cadccc10672",
+		"name": "Things API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Things",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Endpoint}}/api/v1/things/",
+					"host": [
+						"{{Endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"things",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Thing By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Endpoint}}/api/v1/things/12d66f54-4c0f-4b16-8ba2-0fa0e6a24bd9",
+					"host": [
+						"{{Endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"things",
+						"12d66f54-4c0f-4b16-8ba2-0fa0e6a24bd9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Thing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"Released\",\r\n    \"tagline\": \"A new era of wonder begins.\",\r\n    \"title\": \"Wonder Woman 1984\",\r\n    \"video\": false,\r\n    \"vote_average\": 7.0,\r\n    \"vote_count\": 3359,\r\n    \"release_date\": \"2020-12-16\",\r\n    \"revenue\": 131400000,\r\n    \"runtime\": 151,\r\n    \"genres\": [\r\n        {\r\n            \"id\": 14,\r\n            \"name\": \"Fantasy\"\r\n        },\r\n        {\r\n            \"id\": 28,\r\n            \"name\": \"Action\"\r\n        },\r\n        {\r\n            \"id\": 12,\r\n            \"name\": \"Adventure\"\r\n        }\r\n    ],\r\n    \"production_countries\": [\r\n        {\r\n            \"iso_3166_1\": \"US\",\r\n            \"name\": \"United States of America\"\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "{{Endpoint}}/api/v1/things/",
+					"host": [
+						"{{Endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"things",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Thing",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"status\": \"Released\",\r\n        \"tagline\": \"A new era of wonder begins.\",\r\n        \"title\": \"Wonder Woman 1984\",\r\n        \"video\": false,\r\n        \"vote_average\": 7,\r\n        \"vote_count\": 3359,\r\n        \"release_date\": \"2020-12-16\",\r\n        \"revenue\": 131400000,\r\n        \"runtime\": 151,\r\n        \"genres\": [\r\n            {\r\n                \"id\": 14,\r\n                \"name\": \"Fantasy\"\r\n            },\r\n            {\r\n                \"id\": 28,\r\n                \"name\": \"Action\"\r\n            },\r\n            {\r\n                \"id\": 12,\r\n                \"name\": \"Adventure\"\r\n            }\r\n        ],\r\n        \"production_countries\": [\r\n            {\r\n                \"iso_3166_1\": \"asdsadsadsadsadsadsadsad\",\r\n                \"name\": \"United States of America\"\r\n            }\r\n        ]\r\n    }"
+				},
+				"url": {
+					"raw": "{{Endpoint}}/api/v1/things/12d66f54-4c0f-4b16-8ba2-0fa0e6a24bd9",
+					"host": [
+						"{{Endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"things",
+						"12d66f54-4c0f-4b16-8ba2-0fa0e6a24bd9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Thing",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Endpoint}}/api/v1/things/29547e3b-ebdb-4ca0-9647-aa7e50fcb875",
+					"host": [
+						"{{Endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"things",
+						"29547e3b-ebdb-4ca0-9647-aa7e50fcb875"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
