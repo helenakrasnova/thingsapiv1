@@ -16,8 +16,12 @@ api.get('/:id', asyncHandler(async (req, res) => {
     const { id } = req.params;
 
     const result = await service.getById(id);
+    if (result) {
+        res.send(result);
+    } else {
+        res.sendStatus(404);
+    }
 
-    res.send(result);
 }));
 
 
